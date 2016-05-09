@@ -4,14 +4,14 @@ var fs = require('fs');
 var request = require('request');
 var chalk = require('chalk');
 
-var createDepObject = function(depName, parents) {
+var createDepObject = function (depName, parents) {
     return {
         depName: depName,
         parents: parents || ''
     }
 };
 
-var convertDepsListToObject = function(deps, parents) {
+var convertDepsListToObject = function (deps, parents) {
     return deps.map(function (depName) {
         return createDepObject(depName, parents);
     });
@@ -32,11 +32,8 @@ var progress = function (current, total) {
         var width = 80;
         var widthDone = Math.floor(width * (current / total));
         var out = '';
-        for (var i = 0; i < widthDone; i++) {
-            out += '=';
-        }
-        for (var i = 0; i < width - widthDone; i++) {
-            out += '-';
+        for (var i = 0; i < width; i++) {
+            out += i <= widthDone ? '=' : '-';
         }
 
         out += ` ${current} / ${total}`;

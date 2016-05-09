@@ -1,7 +1,8 @@
 # Change Log
 
 ## [Unreleased]
-Nothing
+### Added
+- Chain for each dependency ("via ... > ...") is now dimmed for easier reading.
 
 ## [0.1.1] - 2016-05-09
 ### Added
@@ -11,5 +12,5 @@ Nothing
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/bengummer/cansei/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/bengummer/cansei/compare/v0.1.0...v0.1.1
+[Unreleased]: https://github.com/bengummer/depception/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/bengummer/depception/compare/v0.1.0...v0.1.1
