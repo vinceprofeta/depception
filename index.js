@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 var request = require('request');
+var chalk = require('chalk');
 
 var createDepObject = function(depName, parents) {
     return {
@@ -26,22 +27,27 @@ try {
 }
 
 var progress = function (current, total) {
-    var width = 80;
-    var widthDone = Math.floor(width * (current / total));
-    var out = '';
-    for (var i = 0; i < widthDone; i++) {
-        out += '=';
-    }
-    for (var i = 0; i < width - widthDone; i++) {
-        out += '-';
-    }
-
-    out += ` ${current} / ${total}`;
-
     var stream = process.stderr;
-    stream.cursorTo(0);
-    stream.write(out);
-    stream.clearLine(1);
+    if (current < total) {
+        var width = 80;
+        var widthDone = Math.floor(width * (current / total));
+        var out = '';
+        for (var i = 0; i < widthDone; i++) {
+            out += '=';
+        }
+        for (var i = 0; i < width - widthDone; i++) {
+            out += '-';
+        }
+
+        out += ` ${current} / ${total}`;
+
+        stream.cursorTo(0);
+        stream.write(out);
+        stream.clearLine(1);
+    } else {
+        stream.cursorTo(0);
+        stream.clearLine(1);
+    }
 }
 
 var processedDepNames = [];
@@ -62,8 +68,8 @@ var nextDep = function (currentDepIndex) {
                         var releaseTimestamp = body.time[latestDepVersion];
                         var releaseDate = releaseTimestamp.substr(0, 10);
                         var releaseTime = releaseTimestamp.substr(11, 5);
-                        var viaString = dep.parents ? `(via ${dep.parents})` : '';
-                        results.push(`${releaseDate} ${releaseTime}: ${dep.depName} ${latestDepVersion} ${viaString}`)
+                        var viaString = chalk.dim(dep.parents ? `(via ${dep.parents})` : '');
+                        results.push(`${releaseDate} ${releaseTime}:  ${dep.depName} ${latestDepVersion} ${viaString}`)
                     }
 
                     if (body.versions.hasOwnProperty(latestDepVersion)) {
@@ -86,7 +92,7 @@ var nextDep = function (currentDepIndex) {
         });
     } else {
         var limit = process.argv[3] || 20;
-        console.log(`\nHere are the ${limit} most recent updates from your dependency chain:`);
+        console.log(`Here are the ${limit} most recent updates from your dependency chain:\n`);
         console.log(results.sort().reverse().slice(0, limit).join(`\n`));
         if (skippedDeps.length) {
             console.log(`Skipped: ${skippedDeps.join(', ')}`);
