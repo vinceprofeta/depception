@@ -4,6 +4,9 @@
 ### Added
 - Chain for each dependency ("via ... > ...") is now dimmed for easier reading.
 
+### Security
+- NPM registry URL now uses HTTPS.
+
 ## [0.1.1] - 2016-05-09
 ### Added
 - Now accepts a second parameter (integer) which limits the number of results. If no second parameter is supplied this defaults to 20.

@@ -55,7 +55,7 @@ var nextDep = function (currentDepIndex) {
 
     if (currentDepIndex < deps.length) {
         var dep = deps[currentDepIndex];
-        request(`http://registry.npmjs.org/${dep.depName}`, { json: true }, function (error, response, body) {
+        request(`https://registry.npmjs.org/${dep.depName}`, { json: true }, function (error, response, body) {
             if (!error && body) {
                 if (body.hasOwnProperty('time') && body.hasOwnProperty('dist-tags')) {
                     var latestDepVersion = body['dist-tags'].latest;
