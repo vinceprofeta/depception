@@ -1,0 +1,36 @@
+{
+  "name": "depception",
+  "version": "0.1.1",
+  "description": "Shows recently updated dependencies for your repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "depception": "index.js"
+  },
+  "author": "Ben Gummer",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.72.0"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "preferGlobal": true,
+  "homepage": "https://github.com/bengummer/depception",
+  "bugs": {
+    "url": "https://github.com/bengummer/depception/issues"
+  },
+  "keywords": [
+    "dependency",
+    "dependencies",
+    "chain",
+    "versions",
+    "pinned"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bengummer/depception"
+  }
+}
