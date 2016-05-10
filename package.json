@@ -1,6 +1,6 @@
 {
   "name": "depception",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shows recently updated dependencies for your repo",
   "main": "index.js",
   "scripts": {
