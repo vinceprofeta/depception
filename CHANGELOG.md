@@ -1,6 +1,7 @@
 # Change Log
-
 ## [Unreleased]
+
+## [0.1.2] - 2016-05-10
 ### Added
 - Chain for each dependency ("via ... > ...") is now dimmed for easier reading.
 
@@ -18,5 +19,6 @@
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/bengummer/depception/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/bengummer/depception/compare/v0.1.2...HEAD
 [0.1.1]: https://github.com/bengummer/depception/compare/v0.1.0...v0.1.1
+[0.1.2]: https://github.com/bengummer/depception/compare/v0.1.1...v0.1.2
