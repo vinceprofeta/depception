@@ -20,7 +20,8 @@ var convertDepsListToObject = function (deps, parents) {
 try {
     var pkgJsonFilePath = process.argv[2];
     var pkgJson = JSON.parse(fs.readFileSync(pkgJsonFilePath));
-    var deps = convertDepsListToObject(Object.keys(pkgJson.dependencies));
+    var processedDepNames = Object.keys(pkgJson.dependencies);
+    var deps = convertDepsListToObject(processedDepNames);
 } catch (e) {
     console.error('Please provide a valid package.json file');
     return;
@@ -47,7 +48,6 @@ var progress = function (current, total) {
     }
 }
 
-var processedDepNames = [];
 var results = [];
 var skippedDeps = [];
 var nextDep = function (currentDepIndex) {

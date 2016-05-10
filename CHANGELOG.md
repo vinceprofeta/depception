@@ -4,6 +4,9 @@
 ### Added
 - Chain for each dependency ("via ... > ...") is now dimmed for easier reading.
 
+### Fixed
+- Any dependency which is required in your package.json and also required by one of your dependencies is now listed only once.
+
 ### Security
 - NPM registry URL now uses HTTPS.
 
