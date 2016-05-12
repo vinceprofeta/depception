@@ -1,5 +1,7 @@
 # depception
 
+[![Build Status](https://api.travis-ci.org/bengummer/depception.svg?branch=master)](https://travis-ci.org/bengummer/depception)
+
 _For when your app breaks due to dependency inception._
 
 If you have your direct npm dependecy versions pinned/locked but don't want to [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap) your entire project, you may wake up one day and notice that your tests fail because one of your unpinned sub-dependencies was updated.
