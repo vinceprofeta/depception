@@ -1,5 +1,8 @@
 # Change Log
 ## [Unreleased]
+None
+
+## [0.2.0] - 2016-05-10
 ### Improved
 - NPM registry requests are now done in parallel, reducing overall execution time by a decent amount.
 - Progress is now text based rather than progress bar, as the total number of dependencies is initially unknown due to the dependency tree.
@@ -25,3 +28,4 @@
 [Unreleased]: https://github.com/bengummer/depception/compare/v0.1.2...HEAD
 [0.1.1]: https://github.com/bengummer/depception/compare/v0.1.0...v0.1.1
 [0.1.2]: https://github.com/bengummer/depception/compare/v0.1.1...v0.1.2
+[0.2.0]: https://github.com/bengummer/depception/compare/v0.1.2...v0.2.0
