@@ -1,5 +1,8 @@
 # Change Log
 ## [Unreleased]
+### Improved
+- NPM registry requests are now done in parallel, reducing overall execution time by a decent amount.
+- Progress is now text based rather than progress bar, as the total number of dependencies is initially unknown due to the dependency tree.
 
 ## [0.1.2] - 2016-05-10
 ### Added
