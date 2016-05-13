@@ -1,6 +1,6 @@
 # depception
 
-[![Build Status](https://api.travis-ci.org/bengummer/depception.svg?branch=master)](https://travis-ci.org/bengummer/depception)
+[![npm version](https://badge.fury.io/js/depception.svg)](https://badge.fury.io/js/depception) [![Build Status](https://api.travis-ci.org/bengummer/depception.svg?branch=master)](https://travis-ci.org/bengummer/depception)
 
 _For when your app breaks due to dependency inception._
 
