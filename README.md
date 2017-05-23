@@ -1,5 +1,7 @@
 # depception
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bengummer/depception.svg)](https://greenkeeper.io/)
+
 [![npm version](https://badge.fury.io/js/depception.svg)](https://badge.fury.io/js/depception) [![Build Status](https://api.travis-ci.org/bengummer/depception.svg?branch=master)](https://travis-ci.org/bengummer/depception) ![depdency status](https://david-dm.org/bengummer/depception.svg)
 
 _For when your app breaks due to dependency inception._
