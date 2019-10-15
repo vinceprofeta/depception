@@ -45,6 +45,9 @@ Registry.prototype.fetchForDependency = function (dep, progress) {
                             }
                         }
                     }
+                    
+                    console.log('START SUB', subResults, 'END SUB')
+                    console.log('NEW SUB', newDeps, 'NEW SUB')
 
                     resolve({
                         subResults: subResults,
