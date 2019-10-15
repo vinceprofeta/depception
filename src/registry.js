@@ -26,7 +26,8 @@ Registry.prototype.fetchForDependency = function (dep, progress) {
                             depName: dep.depName,
                             releaseString: `${releaseDate} ${releaseTime}`,
                             latestVersion: latestDepVersion,
-                            viaString: viaString
+                            viaString: viaString,
+                            releaseTimestamp
                         })
                         subResults.push({
                             depName: dep.depName,
