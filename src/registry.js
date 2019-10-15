@@ -22,6 +22,12 @@ Registry.prototype.fetchForDependency = function (dep, progress) {
                         var releaseDate = releaseTimestamp.substr(0, 10);
                         var releaseTime = releaseTimestamp.substr(11, 5);
                         var viaString = dep.parents ? `(via ${dep.parents})` : '';
+                        console.log({
+                            depName: dep.depName,
+                            releaseString: `${releaseDate} ${releaseTime}`,
+                            latestVersion: latestDepVersion,
+                            viaString: viaString
+                        })
                         subResults.push({
                             depName: dep.depName,
                             releaseString: `${releaseDate} ${releaseTime}`,
